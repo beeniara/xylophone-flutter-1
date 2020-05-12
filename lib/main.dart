@@ -8,9 +8,9 @@ class XylophoneApp extends StatelessWidget {
 
   //create sound Method
 
-  void Playsound(){
+  void Playsound(int soundVal){
     final player = AudioCache();
-    player.play('aeiou1.mp3');
+    player.play('aeiou$soundVal.mp3');
   }
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class XylophoneApp extends StatelessWidget {
               FlatButton(
                 color: Colors.red,
                 onPressed: () {
-
+                  Playsound(1);
                 },
 
               ),
@@ -30,7 +30,7 @@ class XylophoneApp extends StatelessWidget {
               FlatButton(
                 color: Colors.yellow,
                 onPressed: () {
-                  Playsound();
+                  Playsound(2);
                 },
 
               ),
@@ -38,21 +38,21 @@ class XylophoneApp extends StatelessWidget {
               FlatButton(
                 color: Colors.green,
                 onPressed: () {
-                  Playsound();
+                  Playsound(3);
                 },
 
               ),
               FlatButton(
                 color: Colors.blue,
                 onPressed: () {
-                  Playsound();
+                  Playsound(4);
                 },
 
               ),
               FlatButton(
                 color: Colors.orange,
                 onPressed: () {
-                  Playsound();
+                  Playsound(5);
                 },
 
               ),
